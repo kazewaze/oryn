@@ -16,7 +16,10 @@ import {
   AdvancedModal
 } from '../components';
 
+import { useTheme } from '../components/ThemeContext';
+
 function Home() {
+  const { theme } = useTheme();
   const [isToastVisible, setIsToastVisible] = useState(false);
   const [isSwitchOn, setIsSwitchOn] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -27,6 +30,7 @@ function Home() {
     <>
       <Head>
         <title>ORYN - Components Showcase</title>
+        <meta name="theme-color" content={theme === 'light' ? '#ececf2' : '#15252d'} />
       </Head>
 
       <Navbar
