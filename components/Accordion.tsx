@@ -53,7 +53,7 @@ function Accordion({ items, allowMultiple = false }: AccordionProps) {
                     theme === 'light'
                     ?
                       <Image
-                        className={styles.logo}
+                        className={styles.chevron__dark}
                         src="/icons/chevron-down-dark.svg"
                         alt="Dark Colored Chevron Down Icon"
                         width={15}
@@ -62,7 +62,7 @@ function Accordion({ items, allowMultiple = false }: AccordionProps) {
                       />
                     :
                       <Image
-                        className={styles.logo}
+                        className={styles.chevron__light}
                         src="/icons/chevron-down-light.svg"
                         alt="Light Colored Chevron Down Icon"
                         width={15}
