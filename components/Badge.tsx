@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Badge.module.css';
 
 type BadgeProps = {
-  color?: 'default' | 'success' | 'warning' | 'error';
+  color?: 'default' | 'info' | 'success' | 'warning' | 'error';
   children: React.ReactNode;
 };
 

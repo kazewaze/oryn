@@ -23,12 +23,12 @@
 
 .warning {
   border: 1px solid var(--color-titan);
-  background: var(--color-titan); /* #f5a623; */
+  background: var(--color-titan);
   color: var(--white);
 }
 
 .error {
   border: 1px solid var(--color-error);
-  background: var(--color-error); /* #ee0000; */
+  background: var(--color-error);
   color: var(--white);
 }
