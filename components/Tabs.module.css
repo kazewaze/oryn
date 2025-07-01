@@ -1,0 +1,33 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tablist {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tablist button {
+  padding: 0.5rem 0;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-text);
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.tablist button:hover {
+  border-color: #aaa;
+}
+
+.tablist button.active {
+  border-color: var(--color-horizon);
+}
+
+.tabpanel {
+  font-size: 0.95rem;
+}

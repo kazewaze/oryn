@@ -1,0 +1,10 @@
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1.5px 0;
+  padding: 0.25rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+}

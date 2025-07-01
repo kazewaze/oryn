@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="166px" height="41px" viewBox="0 0 166 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7" transform="translate(-2.000000, -11.000000)">
+            <g id="Group-5" transform="translate(90.000000, 0.000000)" fill="#FFFFFF" font-family="RussoOne-Regular, Russo One" font-size="55" font-weight="normal">
+                <text id="Y">
+                    <tspan x="0" y="51">Y</tspan>
+                </text>
+                <text id="Y-Copy">
+                    <tspan x="2" y="51">Y</tspan>
+                </text>
+            </g>
+            <g id="Group-3" transform="translate(129.000000, 0.000000)" fill="#FFFFFF" font-family="RussoOne-Regular, Russo One" font-size="55" font-weight="normal">
+                <text id="N">
+                    <tspan x="0" y="51">N</tspan>
+                </text>
+                <text id="N-Copy">
+                    <tspan x="2" y="51">N</tspan>
+                </text>
+            </g>
+            <g id="Group-2" transform="translate(47.000000, 0.000000)" fill="#FFFFFF" font-family="RussoOne-Regular, Russo One" font-size="55" font-weight="normal">
+                <text id="R">
+                    <tspan x="0" y="51">R</tspan>
+                </text>
+                <text id="R-Copy">
+                    <tspan x="3" y="51">R</tspan>
+                </text>
+            </g>
+            <g id="Group-4">
+                <g id="Group" fill="#FFFFFF" font-family="RussoOne-Regular, Russo One" font-size="55" font-weight="normal">
+                    <text id="O">
+                        <tspan x="6" y="51">O</tspan>
+                    </text>
+                    <text id="O">
+                        <tspan x="0" y="51">O</tspan>
+                    </text>
+                </g>
+                <path d="M31.9967843,19.0554661 L13.6689174,45.9155958" id="Line" stroke="#FFFFFF" stroke-width="7" stroke-linecap="square" transform="translate(22.996784, 32.555466) rotate(-168.999999) translate(-22.996784, -32.555466) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

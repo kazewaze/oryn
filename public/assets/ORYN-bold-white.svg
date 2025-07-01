@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1235px" height="410px" viewBox="0 0 1235 410" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 28</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-28" transform="translate(50.000000, -79.000000)">
+            <path d="M221,350 C139.814142,350 74,284.185858 74,203 L74,203 C74,121.814142 139.814142,56 221,56 L221,56" id="Path" stroke="#FFFFFF" stroke-width="100" transform="translate(147.500000, 203.000000) rotate(90.000000) translate(-147.500000, -203.000000) "></path>
+            <path d="M221,512 C139.814142,512 74,446.185858 74,365 L74,365 C74,283.814142 139.814142,218 221,218 L221,218" id="Path-Copy" stroke="#FFFFFF" stroke-width="100" transform="translate(147.500000, 365.000000) rotate(-90.000000) translate(-147.500000, -365.000000) "></path>
+            <circle id="Oval" fill="#FFFFFF" cx="147.5" cy="283.5" r="37.5"></circle>
+            <text id="RYN" font-family="TiltWarp-Regular, Tilt Warp" font-size="450" font-weight="normal" fill="#FFFFFF">
+                <tspan x="365" y="446">RYN</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

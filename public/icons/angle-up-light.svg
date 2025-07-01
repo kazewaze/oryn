@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="322px" height="208px" viewBox="0 0 322 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>angle-up-light</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="angle-up-light" fill="#CFD7D6" fill-rule="nonzero">
+            <path d="M178,7.7 L314,143.7 C323.4,153.1 323.4,168.3 314,177.6 L291.4,200.2 C282,209.6 266.8,209.6 257.5,200.2 L161,103.9 L64.6,200.3 C55.2,209.7 40,209.7 30.7,200.3 L8,177.7 C-1.4,168.3 -1.4,153.1 8,143.8 L144,7.8 C153.4,-1.7 168.6,-1.7 178,7.7 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

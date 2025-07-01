@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="436px" height="109px" viewBox="0 0 436 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18" transform="translate(-6.000000, -32.000000)">
+            <g id="Group-13">
+                <text id="O" font-family="RussoOne-Regular, Russo One" font-size="150" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="139">O</tspan>
+                </text>
+                <rect id="Rectangle" fill="#FFFFFF" x="6" y="87" width="98" height="3.5"></rect>
+            </g>
+            <g id="Group-12" transform="translate(117.000000, 0.000000)">
+                <text id="R" font-family="RussoOne-Regular, Russo One" font-size="150" font-weight="normal" fill="#000000">
+                    <tspan x="0.75" y="139">R</tspan>
+                </text>
+                <rect id="Rectangle-Copy" fill="#FFFFFF" transform="translate(37.500000, 86.500000) rotate(-90.000000) translate(-37.500000, -86.500000) " x="-15" y="84.75" width="105" height="3.5"></rect>
+            </g>
+            <g id="Group-15" transform="translate(341.000000, 0.000000)">
+                <text id="N" font-family="RussoOne-Regular, Russo One" font-size="150" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="139">N</tspan>
+                </text>
+                <rect id="Rectangle-Copy-6" fill="#FFFFFF" transform="translate(37.750000, 65.000000) scale(1, -1) rotate(90.000000) translate(-37.750000, -65.000000) " x="5.75" y="63.25" width="64" height="3.5"></rect>
+                <rect id="Rectangle-Copy-7" fill="#FFFFFF" transform="translate(71.750000, 107.000000) scale(1, -1) rotate(90.000000) translate(-71.750000, -107.000000) " x="39.75" y="105.25" width="64" height="3.5"></rect>
+            </g>
+            <g id="Group-17" transform="translate(233.000000, 0.000000)">
+                <text id="Y" font-family="RussoOne-Regular, Russo One" font-size="150" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="139">Y</tspan>
+                </text>
+                <rect id="Rectangle-Copy-4" fill="#FFFFFF" transform="translate(50.000000, 110.500000) scale(1, -1) translate(-50.000000, -110.500000) " x="34" y="109" width="32" height="3"></rect>
+                <rect id="Rectangle-Copy-8" fill="#000000" transform="translate(36.750000, 125.500000) rotate(90.000000) translate(-36.750000, -125.500000) " x="23.25" y="124.75" width="27" height="1.5"></rect>
+                <rect id="Rectangle-Copy-9" fill="#000000" transform="translate(63.750000, 125.500000) rotate(90.000000) translate(-63.750000, -125.500000) " x="50.25" y="124.75" width="27" height="1.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

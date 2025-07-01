@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="450px" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>x-icon-dark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="x-icon-dark" fill="#0B1418" fill-rule="nonzero">
+            <g id="chevron-up-dark" transform="translate(193.000000, 0.000000)">
+                <path d="M9.4,202.4 C-3.1,214.9 -3.1,235.2 9.4,247.7 L201.4,439.7 C213.9,452.2 234.2,452.2 246.7,439.7 C259.2,427.2 259.2,406.9 246.7,394.4 L77.3,225 L246.6,55.6 C259.1,43.1 259.1,22.8 246.6,10.3 C234.1,-2.2 213.8,-2.2 201.3,10.3 L9.3,202.3 L9.4,202.4 Z" id="Path"></path>
+            </g>
+            <g id="chevron-down-dark">
+                <path d="M247.6,202.4 C260.1,214.9 260.1,235.2 247.6,247.7 L55.6,439.7 C43.1,452.2 22.8,452.2 10.3,439.7 C-2.2,427.2 -2.2,406.9 10.3,394.4 L179.7,225 L10.4,55.6 C-2.1,43.1 -2.1,22.8 10.4,10.3 C22.9,-2.2 43.2,-2.2 55.7,10.3 L247.7,202.3 L247.6,202.4 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

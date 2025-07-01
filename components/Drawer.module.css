@@ -1,0 +1,74 @@
+.overlay {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.2s ease-in;
+  z-index: 1000;
+}
+
+.drawer {
+  height: 100%;
+  width: 100%;
+  max-width: 480px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--drawer-color);
+  background: var(--drawer-bg);
+  animation: slideLeft 0.3s ease-out;
+}
+
+.drawer.bottom {
+  height: auto;
+  max-height: 90%;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease-out;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.content {
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+/* Animations */
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); } to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); } to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { background: rgba(0, 0, 0, 0); } to { background: rgba(0, 0, 0, 0.5); }
+}
+
+/* Responsive behavior */
+
+@media (max-width: 768px) {
+  .overlay {
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .drawer {
+    height: auto;
+    max-height: 90%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.3s ease-out;
+  }
+}

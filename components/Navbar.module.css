@@ -1,0 +1,37 @@
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: var(--nav-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-bg-surface);
+  border-bottom: 2px solid var(--color-border);
+  z-index: 2;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.link:hover {
+  text-decoration: underline;
+  /* text-decoration-thickness: 2.25px; */
+}

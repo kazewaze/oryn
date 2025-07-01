@@ -1,0 +1,29 @@
+.switch {
+  width: 44px;
+  height: 24px;
+  background: var(--switch-bg);
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.switch .thumb {
+  height: 20px;
+  width: 20px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  transform: translateX(0);
+}
+
+.checked {
+  background: var(--color-horizon);
+}
+
+.checked .thumb {
+  transform: translateX(20px);
+}
