@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./Drawer.module.css";
 
@@ -6,70 +6,154 @@ type DrawerProps = {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
-  position?: "right" | "bottom";
   children: React.ReactNode;
+  position?: "right" | "bottom" | "auto";
 };
 
-function Drawer({ isOpen, onClose, title, position = "right", children, }: DrawerProps) {
+export default function Drawer({
+  isOpen,
+  onClose,
+  title,
+  position = "auto",
+  children,
+}: DrawerProps) {
   const drawerRef = useRef<HTMLDivElement>(null);
+  const [shouldRender, setShouldRender] = useState(isOpen);
+  const [closing, setClosing] = useState(false);
+  const [effectivePosition, setEffectivePosition] = useState<"right" | "bottom">("right");
+  const touchStart = useRef<number | null>(null);
+  const scrollY = useRef<number>(0);
+  const lastFocusedElement = useRef<HTMLElement | null>(null);
+
+  useEffect(() => { // Position Detection for Drawer-Scroll Bug Fix.
+    const determinePosition = () => {
+      if (position === "auto") {
+        setEffectivePosition(window.innerWidth < 768 ? "bottom" : "right");
+      } else {
+        setEffectivePosition(position);
+      }
+    };
+
+    determinePosition();
+    window.addEventListener("resize", determinePosition);
+    return () => window.removeEventListener("resize", determinePosition);
+  }, [position]);
+
+  useEffect(() => { // Animation/Rendering Control.
+    if (isOpen) {
+      setShouldRender(true);
+      setClosing(false);
+    } else if (shouldRender) {
+      setClosing(true);
+      const timeout = setTimeout(() => {
+        setShouldRender(false);
+      }, 300);
+      return () => clearTimeout(timeout);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
+    if (!shouldRender) return;
+
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
 
-    if (isOpen) { // !!! How to effeciently set and unset these... ? !!!
-      document.body.style.top = "0px";
-      document.body.style.left = "0px";
-      document.body.style.right = "0px";
-      document.body.style.position = "fixed";
-      // document.body.style.pointerEvents = "none";
-      document.body.style.overflow = "hidden";
-      document.body.style.overscrollBehavior = "contain";
-      document.body.style.scrollbarWidth = "thin";
-      document.body.style.scrollbarColor = "hsl(240 5.9% 90%) transparent";
-      document.addEventListener("keydown", handleEscape);
-    }
+    const trapFocus = (e: KeyboardEvent) => {
+      if (e.key !== "Tab" || !drawerRef.current) return;
+
+      const focusableEls = drawerRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl?.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl?.focus();
+      }
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStart.current = effectivePosition === "bottom"
+                           ? e.touches[0].clientY
+                           : e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (touchStart.current === null) return;
+
+      const current = effectivePosition === "bottom"
+                      ? e.touches[0].clientY
+                      : e.touches[0].clientX;
+
+      const delta = current - touchStart.current;
+
+      if (delta > 75) {
+        onClose();
+        touchStart.current = null;
+      }
+    };
+
+    scrollY.current = window.scrollY;
+    lastFocusedElement.current = document.activeElement as HTMLElement;
+
+    document.body.style.overflow = "hidden";
+
+    document.addEventListener("keydown", handleEscape);
+    document.addEventListener("keydown", trapFocus);
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchmove", handleTouchMove);
+
+    setTimeout(() => {
+      drawerRef.current?.focus();
+    }, 0);
 
     return () => {
-      document.body.style.top = "";
-      document.body.style.left = "";
-      document.body.style.right = "";
-      document.body.style.position = "";
-      // document.body.style.pointerEvents = "";
       document.body.style.overflow = "";
-      document.body.style.overscrollBehavior = "";
-      document.body.style.scrollbarWidth = "";
-      document.body.style.scrollbarColor = "";
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+      window.scrollTo(0, scrollY.current);
+
+      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("keydown", trapFocus);
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
+
+      lastFocusedElement.current?.focus();
+    };
+  }, [shouldRender, effectivePosition, onClose]);
+
+  if (!shouldRender) return null;
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
+    <div className={styles.overlay} onClick={onClose} role="presentation">
       <div
-        className={`${styles.drawer} ${position === "bottom" ? styles.bottom : ""}`}
+        className={`
+          ${styles.drawer}
+          ${effectivePosition === "bottom" ? styles.bottom : styles.right}
+          ${closing ? (
+            effectivePosition === "bottom" ? styles.slideOutBottom : styles.slideOutRight
+          ) : ""}
+        `}
         ref={drawerRef}
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
+        aria-label={title || "Drawer"}
+        tabIndex={-1}
       >
         {
-          title
-          &&
-          <div className={styles.header}>
-            <h2>{ title }</h2>
-          </div>
+          title && (
+            <div className={styles.header}>
+              <h2>{title}</h2>
+            </div>
+          )
         }
-
-        <div className={styles.content}>
-          { children }
-        </div>
+        <div className={styles.content}>{children}</div>
       </div>
     </div>
   );
 }
-
-export default Drawer;

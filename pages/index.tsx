@@ -118,7 +118,12 @@ function Home() {
             Open Categories
           </Button>
 
-          <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} title="Categories">
+          <Drawer
+            isOpen={isDrawerOpen}
+            onClose={() => setIsDrawerOpen(false)}
+            title="Categories"
+            position="auto"
+          >
             <ul>
               <li>Overview</li>
               <li>Company News</li>

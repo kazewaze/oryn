@@ -74,7 +74,9 @@
   --accordion-content-bg: #ececf2;
 
   --drawer-color: var(--color-text);
-  --drawer-bg: var(--color-bg-surface);
+  --drawer-bg: var(--white);
+  --drawer-header-bg: var(--color-bg-surface);
+  --drawer-header-bottom-border: var(--color-border);
 
   --bulb-toggle-color-fill: var(--black);
 
@@ -124,6 +126,8 @@
 
   --drawer-color: var(--color-satellite);
   --drawer-bg: var(--color-nebula);
+  --drawer-header-bg: var(--color-bg-surface);
+  --drawer-header-bottom-border: var(--color-border);
 
   --bulb-toggle-color-fill: var(--white);
 
