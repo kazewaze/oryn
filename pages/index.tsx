@@ -112,7 +112,7 @@ function Home() {
 
         { /* DRAWER */ }
         <div style={{ marginTop: '2rem' }}>
-          <h2>Drawer (with Button)</h2>
+          <h2>Drawer</h2>
 
           <Button onClick={() => setIsDrawerOpen(true)}>
             Open Categories
